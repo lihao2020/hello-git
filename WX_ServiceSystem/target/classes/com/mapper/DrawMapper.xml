@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hr.dao.DrawDao">
+    <insert id="InsertDraw" parameterType="Draw">
+        insert into draw_word(draw_name,draw_describe,draw_price,draw_type,draw_img) values(#{draw_name},#{draw_describe},#{draw_price},#{draw_type},#{draw_img})
+    </insert>
+
+    <insert id="InsertRecommend" parameterType="RecommendDraw">
+        insert into recommend_draw(recommend_draw_name,recommend_draw_img) values(#{recommend_draw_name},#{recommend_draw_img})
+    </insert>
+</mapper>
